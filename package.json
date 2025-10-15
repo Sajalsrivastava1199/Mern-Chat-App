@@ -4,16 +4,14 @@
   "main": "server.js",
   "type": "commonjs",
   "scripts": {
-    "start": "nodemon backend/server.js",
-    "server": "node backend/server.js",
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js",
     "frontend": "npm start --prefix frontend",
-    "frontend-install": "npm install --prefix frontend",
-    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
-    "prod": "npm run build && cross-env NODE_ENV=production node backend/server.js"
+    "build": "npm install --legacy-peer-deps && npm install --prefix frontend --legacy-peer-deps && npm run build --prefix frontend"
   },
   "author": "Sajal Srivastava",
   "license": "ISC",
-  "description": "",
+  "description": "MERN Chat Application",
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "colors": "^1.4.0",
