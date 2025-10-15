@@ -4,7 +4,7 @@ import { IconButton,Button,Modal,ModalBody,ModalOverlay,ModalContent,ModalFooter
 import { ChatState } from '../../Context/ChatProvider'
 import axios from 'axios'
 import UserListItem from '../UserAvatar/UserListItem'
-import UserBadgeItem from '../UserAvatar/UserbadgeItem'
+import UserBadgeItem from '../UserAvatar/UserBadgeItem'
 
 export default function GroupChatModal({children}){
     const { isOpen, onOpen, onClose } = useDisclosure()

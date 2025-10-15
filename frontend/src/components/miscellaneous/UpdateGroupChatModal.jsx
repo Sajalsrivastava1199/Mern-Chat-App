@@ -14,7 +14,7 @@ import {
 } from '@chakra-ui/react'
 import { ViewIcon } from '@chakra-ui/icons'
 import { ChatState } from '../../Context/ChatProvider'
-import UserBadgeItem from '../UserAvatar/UserbadgeItem'
+import UserBadgeItem from '../UserAvatar/UserBadgeItem'
 import axios from 'axios'
 import UserListItem from '../UserAvatar/UserListItem'
 import { isCSSVariableName } from 'framer-motion'
