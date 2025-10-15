@@ -1,7 +1,7 @@
 const asyncHandler = require("express-async-handler")
 const Message=require("../models/messageModel");
-const User = require("../Models/userModel");
-const Chat = require("../Models/chatModel");
+const User = require("../models/userModel");
+const Chat = require("../models/chatModel");
 
 const sendMessage = asyncHandler(async(req,res)=>{
     const {content, chatId}=req.body;
@@ -32,7 +32,7 @@ const sendMessage = asyncHandler(async(req,res)=>{
     }catch(error){
         console.log("error:",error)
         res.status(400);
-        throw new error(error.message)
+        throw new Error(error.message)
     }
 })
 //fetching all messages of a chat(either one to one or group chat)
@@ -44,7 +44,7 @@ const allMessages=asyncHandler(async(req,res)=>{
         res.json(messages)
     }catch(error){
         res.status(400)
-        throw new error(error.message)
+        throw new Error(error.message)
     }
     
 })
